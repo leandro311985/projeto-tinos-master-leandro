@@ -1,0 +1,234 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/header"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/colorPrimary"
+            app:layout_constraintBottom_toTopOf="@+id/recyclerView"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <LinearLayout
+                android:id="@+id/progresso_container"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="20dp"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="24dp"
+                android:layout_marginEnd="20dp"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tvTitle">
+
+                <ProgressBar
+                    android:id="@+id/progresso"
+                    style="@style/Base.Widget.AppCompat.ProgressBar.Horizontal"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1" />
+
+                <TextView
+                    android:id="@+id/porcentagem"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="8dp"
+                    android:textColor="@color/white"
+                    android:textStyle="bold"
+                    android:textSize="18sp"
+                    tools:text="100%" />
+
+            </LinearLayout>
+
+            <ImageView
+                android:id="@+id/ivFinishTask"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                app:layout_constraintBottom_toBottomOf="@+id/first_divider"
+                app:layout_constraintEnd_toStartOf="@+id/first_divider"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/first_divider"
+                app:srcCompat="@drawable/ic_finish_task" />
+
+            <View
+                android:id="@+id/first_divider"
+                android:layout_width="1dp"
+                android:layout_height="40dp"
+                android:layout_marginTop="32dp"
+                android:layout_marginBottom="16dp"
+                android:background="@android:color/darker_gray"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toStartOf="@+id/icon_ruas"
+                app:layout_constraintStart_toEndOf="@+id/ivFinishTask"
+                app:layout_constraintTop_toBottomOf="@+id/progresso_container" />
+
+            <ImageView
+                android:id="@+id/icon_ruas"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:src="@drawable/ic_ruas_white"
+                app:layout_constraintBottom_toBottomOf="@+id/first_divider"
+                app:layout_constraintEnd_toStartOf="@+id/ruas_total"
+                app:layout_constraintStart_toEndOf="@+id/first_divider"
+                app:layout_constraintTop_toTopOf="@+id/first_divider" />
+
+            <TextView
+                android:id="@+id/ruas_total"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/white"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toTopOf="@+id/ruas_restantes"
+                app:layout_constraintEnd_toStartOf="@+id/divider"
+                app:layout_constraintStart_toEndOf="@+id/icon_ruas"
+                app:layout_constraintTop_toTopOf="@+id/icon_ruas"
+                app:layout_constraintVertical_chainStyle="packed"
+                tools:text="Casas (430)" />
+
+            <TextView
+                android:id="@+id/ruas_restantes"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/white"
+                android:textSize="@dimen/textSizeSmall"
+                app:layout_constraintBottom_toBottomOf="@+id/icon_ruas"
+                app:layout_constraintStart_toStartOf="@+id/ruas_total"
+                app:layout_constraintTop_toBottomOf="@+id/ruas_total"
+                tools:text="Casas (430)" />
+
+            <View
+                android:id="@+id/divider"
+                android:layout_width="1dp"
+                android:layout_height="0dp"
+                android:background="@android:color/darker_gray"
+                app:layout_constraintBottom_toBottomOf="@+id/first_divider"
+                app:layout_constraintEnd_toStartOf="@+id/icon_casas"
+                app:layout_constraintStart_toEndOf="@+id/ruas_total"
+                app:layout_constraintTop_toTopOf="@+id/first_divider" />
+
+            <ImageView
+                android:id="@+id/icon_casas"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_casas_white"
+                app:layout_constraintBottom_toBottomOf="@+id/divider"
+                app:layout_constraintEnd_toStartOf="@+id/casas_total"
+                app:layout_constraintStart_toEndOf="@+id/divider"
+                app:layout_constraintTop_toTopOf="@+id/divider" />
+
+            <TextView
+                android:id="@+id/casas_total"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/white"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toTopOf="@+id/casas_restantes"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/icon_casas"
+                app:layout_constraintTop_toTopOf="@+id/icon_casas"
+                app:layout_constraintVertical_chainStyle="packed"
+                tools:text="Casas (430)" />
+
+            <TextView
+                android:id="@+id/casas_restantes"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/white"
+                android:textSize="@dimen/textSizeSmall"
+                app:layout_constraintBottom_toBottomOf="@+id/icon_casas"
+                app:layout_constraintStart_toStartOf="@+id/casas_total"
+                app:layout_constraintTop_toBottomOf="@+id/casas_total"
+                tools:text="Casas (430)" />
+
+            <TextView
+                android:id="@+id/tvTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="16dp"
+                android:layout_marginEnd="8dp"
+                android:layout_marginBottom="20dp"
+                android:textColor="@color/white"
+                android:textSize="@dimen/textSizeMedium"
+                app:layout_constraintBottom_toTopOf="@+id/progresso_container"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:text="CSILSG05m11.t30" />
+
+            <ImageView
+                android:id="@+id/btBack"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="8dp"
+                android:minWidth="40dp"
+                android:minHeight="40dp"
+                android:scaleType="center"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:srcCompat="@drawable/ic_voltar" />
+
+            <ImageView
+                android:id="@+id/ivPreviewMap"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="8dp"
+                android:minWidth="40dp"
+                android:minHeight="40dp"
+                android:scaleType="center"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:srcCompat="@drawable/ic_world" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recyclerView"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/header" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/float_roteiro_imprimir"
+        android:layout_gravity="start|bottom"
+        app:srcCompat="@drawable/ic_baseline_filter_list_24px"
+        android:layout_marginEnd="@dimen/mediumMargin"
+        android:layout_marginStart="@dimen/mediumMargin"
+        android:layout_marginBottom="@dimen/mediumMargin"/>
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/float_roteiro"
+        android:layout_gravity="end|bottom"
+        app:srcCompat="@drawable/ic_baseline_filter_list_24px"
+        android:layout_marginEnd="@dimen/mediumMargin"
+        android:layout_marginStart="@dimen/mediumMargin"
+        android:layout_marginBottom="@dimen/mediumMargin"/>
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

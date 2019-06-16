@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:fillViewport="true">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:paddingTop="@dimen/largeMargin"
+        android:paddingBottom="@dimen/largeMargin">
+
+        <ImageView
+            android:id="@+id/image"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_pesquisa"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <View
+            android:id="@+id/divider"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginStart="@dimen/xxLargeMargin"
+            android:layout_marginTop="@dimen/mediumMargin"
+            android:layout_marginEnd="@dimen/xxLargeMargin"
+            android:alpha="0.07"
+            android:background="@color/colorPrimary"
+            app:layout_constraintTop_toBottomOf="@id/image" />
+
+        <TextView
+            android:id="@+id/sub"
+            style="@style/BaseTextStyle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/xxLargeMargin"
+            android:layout_marginTop="@dimen/mediumMargin"
+            android:layout_marginEnd="@dimen/xxLargeMargin"
+            android:text="@string/pesquisa_sub"
+            app:layout_constraintTop_toBottomOf="@id/divider" />
+
+        <Button
+            android:id="@+id/btn_medidor"
+            style="@style/SelectableButton"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/mediumMargin"
+            android:layout_marginTop="@dimen/xLargeMargin"
+            android:layout_marginEnd="@dimen/mediumMargin"
+            android:text="@string/pesquisa_medidor"
+            app:layout_constraintEnd_toStartOf="@id/btn_matricula"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/sub" />
+
+        <Button
+            android:id="@+id/btn_matricula"
+            style="@style/SelectableButton"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="@dimen/mediumMargin"
+            android:text="@string/pesquisa_matricula"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/btn_medidor"
+            app:layout_constraintTop_toTopOf="@id/btn_medidor" />
+
+        <Button
+            android:id="@+id/btn_nome"
+            style="@style/SelectableButton"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/regularMargin"
+            android:text="@string/pesquisa_nome"
+            app:layout_constraintEnd_toEndOf="@id/btn_medidor"
+            app:layout_constraintStart_toStartOf="@id/btn_medidor"
+            app:layout_constraintTop_toBottomOf="@id/btn_medidor" />
+
+        <Button
+            android:id="@+id/btn_endereco"
+            style="@style/SelectableButton"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="@string/pesquisa_endereco"
+            app:layout_constraintEnd_toEndOf="@id/btn_matricula"
+            app:layout_constraintStart_toStartOf="@id/btn_matricula"
+            app:layout_constraintTop_toTopOf="@id/btn_nome" />
+
+        <EditText
+            android:id="@+id/input_search"
+            style="@style/RoundedSearchInput"
+            android:layout_width="0dp"
+            android:layout_marginStart="@dimen/xLargeMargin"
+            android:layout_marginTop="@dimen/xxLargeMargin"
+            android:layout_marginEnd="@dimen/xLargeMargin"
+            android:hint="@string/pesquisa_search"
+            android:imeOptions="actionSearch"
+            android:inputType="text"
+            android:maxLines="1"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/btn_nome" />
+
+        <Button
+            android:id="@+id/btn_search"
+            style="@style/RoundedButton"
+            android:layout_width="0dp"
+            android:layout_marginStart="@dimen/xLargeMargin"
+            android:layout_marginTop="@dimen/mediumMargin"
+            android:layout_marginEnd="@dimen/xLargeMargin"
+            android:text="@string/send"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/input_search" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.core.widget.NestedScrollView>

@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#232A37</color>
+    <color name="colorPrimaryDarker">#161924</color>
+    <color name="colorPrimaryDisabled">#80232A37</color>
+    <color name="colorPrimaryDark">@color/colorPrimary</color>
+    <color name="colorAccent">@color/blueColor</color>
+    <color name="white">#FFFFFF</color>
+    <color name="blueColor">#0089FF</color>
+    <color name="dividerColor">#12232A37</color>
+    <color name="whiteDividerColor">#12FFFFFF</color>
+    <color name="whiteOpaqueDividerColor">#66FFFFFF</color>
+
+    <color name="textBlue">#1C2129</color>
+
+    <color name="mercury">#e3e3e3</color>
+    <color name="lightGray">#ECECEC</color>
+    <color name="yellow">#F8E71C</color>
+    <color name="red">#FF0300</color>
+</resources>

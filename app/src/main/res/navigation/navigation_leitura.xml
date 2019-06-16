@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/navigation_leitura"
+    app:startDestination="@+id/menu">
+
+    <fragment
+        android:id="@+id/menu"
+        android:name="br.com.iresult.gmfmobile.ui.main.tarefas.itinerary.reading.LeituraMenuFragment" />
+
+    <fragment android:id="@+id/debitos"
+        android:name="br.com.iresult.gmfmobile.ui.main.tarefas.itinerary.reading.debits.DebitosFragment"/>
+
+    <fragment android:id="@+id/dicas"
+        android:name="br.com.iresult.gmfmobile.ui.main.tarefas.itinerary.reading.tips.DicasFragment"/>
+
+    <fragment android:id="@+id/ocorrencia"
+        android:name="br.com.iresult.gmfmobile.ui.main.tarefas.itinerary.reading.occourence.OcorrenciaFragment"/>
+
+    <fragment android:id="@+id/ordemServico"
+        android:name="br.com.iresult.gmfmobile.ui.main.tarefas.itinerary.reading.order.OrdemServicoFragment"/>
+
+    <fragment android:id="@+id/dadosCadastrais"
+        android:name="br.com.iresult.gmfmobile.ui.main.tarefas.itinerary.reading.data.DataRegistersFragment"/>
+
+</navigation>

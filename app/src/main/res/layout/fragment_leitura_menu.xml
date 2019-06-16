@@ -1,0 +1,257 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:id="@+id/debitos"
+            android:layout_width="0dp"
+            android:layout_height="90dp"
+            android:layout_marginStart="@dimen/activity_horizontal_margin"
+            android:alpha="0.7"
+            android:layout_marginTop="@dimen/activity_vertical_margin"
+            android:layout_marginEnd="8dp"
+            android:background="@drawable/leitura_menu_item_bg"
+            android:gravity="center"
+            android:orientation="vertical"
+            app:layout_constraintEnd_toStartOf="@+id/dados"
+            app:layout_constraintHorizontal_chainStyle="spread"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <TextView
+                android:id="@+id/total_debitos"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:textSize="40sp"
+                android:textColor="@color/leitura_menu_color"
+                android:textStyle="bold"
+                tools:text="3" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="10dp"
+                android:textColor="@color/leitura_menu_color"
+                android:text="Débitos"
+                />
+
+        </LinearLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/dados"
+            android:layout_width="0dp"
+            android:layout_height="90dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="@dimen/activity_vertical_margin"
+            android:layout_marginEnd="8dp"
+            android:background="@drawable/leitura_menu_item_bg"
+            android:gravity="center"
+            android:alpha="0.7"
+            android:orientation="vertical"
+            app:layout_constraintEnd_toStartOf="@+id/ordem"
+            app:layout_constraintStart_toEndOf="@+id/debitos"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <ImageView
+                android:id="@+id/imageView5"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="8dp"
+                android:layout_marginBottom="8dp"
+                android:layout_weight="1"
+                android:src="@drawable/ic_dados"
+                app:layout_constraintBottom_toTopOf="@+id/textView2"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/textView2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="8dp"
+                android:layout_marginBottom="8dp"
+                android:gravity="center"
+                android:text="Dados Cadastrais"
+                android:textColor="@color/leitura_menu_color"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/imageView5" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <LinearLayout
+            android:id="@+id/ordem"
+            android:layout_width="0dp"
+            android:layout_height="90dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="@dimen/activity_vertical_margin"
+            android:layout_marginEnd="@dimen/activity_horizontal_margin"
+            android:background="@drawable/leitura_menu_item_bg"
+            android:alpha="0.7"
+            android:gravity="center"
+            android:orientation="vertical"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/dados"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:src="@drawable/ic_os" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="10dp"
+                android:gravity="center"
+                android:text="Ordem de Serviço"
+                android:textColor="@color/leitura_menu_color" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/ocorrencia"
+            android:layout_width="0dp"
+            android:layout_height="90dp"
+            android:layout_marginStart="@dimen/activity_horizontal_margin"
+            android:layout_marginTop="@dimen/activity_vertical_margin"
+            android:layout_marginEnd="8dp"
+            android:background="@drawable/leitura_menu_item_bg"
+            android:gravity="center"
+            android:orientation="vertical"
+            app:layout_constraintEnd_toStartOf="@+id/dicas"
+            app:layout_constraintHorizontal_chainStyle="spread"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/debitos">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:src="@drawable/ic_ocorrencia" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="10dp"
+                android:gravity="center"
+                android:text="Ocorrência"
+                android:textColor="@color/leitura_menu_color" />
+
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/tvBadge"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:layout_marginEnd="32dp"
+            android:background="@drawable/bg_badge_red"
+            android:visibility="gone"
+            app:layout_constraintEnd_toStartOf="@+id/dicas"
+            app:layout_constraintStart_toEndOf="@+id/ocorrencia"
+            app:layout_constraintTop_toTopOf="@+id/ocorrencia" />
+
+        <LinearLayout
+            android:id="@+id/dicas"
+            android:layout_width="0dp"
+            android:layout_height="90dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="@dimen/activity_vertical_margin"
+            android:layout_marginEnd="8dp"
+            android:background="@drawable/leitura_menu_item_bg"
+            android:gravity="center"
+            android:orientation="vertical"
+            app:layout_constraintEnd_toStartOf="@+id/mapa"
+            app:layout_constraintStart_toEndOf="@+id/ocorrencia"
+            app:layout_constraintTop_toBottomOf="@+id/debitos">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:src="@drawable/ic_dias" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="10dp"
+                android:gravity="center"
+                android:text="Dicas"
+                android:textColor="@color/leitura_menu_color" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/mapa"
+            android:layout_width="0dp"
+            android:layout_height="90dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="@dimen/activity_vertical_margin"
+            android:layout_marginEnd="@dimen/activity_horizontal_margin"
+            android:background="@drawable/leitura_menu_item_bg"
+            android:gravity="center"
+            android:orientation="vertical"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/dicas"
+            app:layout_constraintTop_toBottomOf="@+id/debitos">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:src="@drawable/ic_maps" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="10dp"
+                android:gravity="center"
+                android:text="Mapa"
+                android:textColor="@color/leitura_menu_color" />
+
+        </LinearLayout>
+
+        <com.santalu.maskedittext.MaskEditText
+            android:id="@+id/leitura"
+            android:layout_width="0dp"
+            android:layout_height="48dp"
+            android:layout_margin="@dimen/activity_vertical_margin"
+            android:background="@drawable/bg_white_selector"
+            android:drawableStart="@drawable/ic_search"
+            android:drawablePadding="@dimen/activity_horizontal_margin"
+            android:inputType="number"
+            android:paddingStart="@dimen/activity_horizontal_margin"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/mapa"
+            app:met_mask="######"/>
+
+        <Button
+            android:id="@+id/btClose"
+            style="@style/RoundedButton"
+            android:layout_width="0dp"
+            android:layout_marginTop="20dp"
+            android:text="Imprimir"
+            app:layout_constraintEnd_toEndOf="@+id/leitura"
+            app:layout_constraintStart_toStartOf="@+id/leitura"
+            app:layout_constraintTop_toBottomOf="@+id/leitura" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.core.widget.NestedScrollView>

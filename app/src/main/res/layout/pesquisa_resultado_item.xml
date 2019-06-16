@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginBottom="@dimen/mediumMargin">
+
+    <View
+        android:id="@+id/bg_left"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="@drawable/bg_primary_left"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/bg_right"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <View
+        android:id="@+id/bg_right"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="@drawable/bg_grey_right"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/bg_left"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <!--LEFT SIDE-->
+    <TextView
+        android:id="@+id/endereco"
+        style="@style/TitleWhiteTextStyle"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/regularMargin"
+        android:layout_marginTop="@dimen/regularMargin"
+        android:layout_marginEnd="@dimen/regularMargin"
+        app:layout_constraintEnd_toEndOf="@id/bg_left"
+        app:layout_constraintStart_toStartOf="@id/bg_left"
+        app:layout_constraintTop_toTopOf="@id/bg_left"
+        tools:text="Rua Paula Souza Magalhães, 212" />
+
+    <View
+        android:id="@+id/divider"
+        android:layout_width="24dp"
+        android:layout_height="1dp"
+        android:layout_marginTop="@dimen/regularMargin"
+        android:layout_marginBottom="@dimen/smallMargin"
+        android:background="@color/blueColor"
+        app:layout_constraintBottom_toTopOf="@id/bairro"
+        app:layout_constraintStart_toStartOf="@id/endereco"
+        app:layout_constraintTop_toBottomOf="@id/endereco"
+        app:layout_constraintVertical_chainStyle="packed" />
+
+    <TextView
+        android:id="@+id/bairro"
+        style="@style/BaseWhiteTextStyle"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:gravity="start"
+        app:layout_constraintBottom_toTopOf="@id/complemento"
+        app:layout_constraintEnd_toEndOf="@id/endereco"
+        app:layout_constraintStart_toStartOf="@id/endereco"
+        app:layout_constraintTop_toBottomOf="@id/divider"
+        tools:text="Valo Velho" />
+
+    <TextView
+        android:id="@+id/complemento"
+        style="@style/BaseWhiteTextStyle"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:gravity="start"
+        app:layout_constraintBottom_toTopOf="@id/cep"
+        app:layout_constraintEnd_toEndOf="@id/bairro"
+        app:layout_constraintStart_toStartOf="@id/bairro"
+        app:layout_constraintTop_toBottomOf="@id/bairro"
+        tools:text="Compl.: 2º andar" />
+
+    <TextView
+        android:id="@+id/cep"
+        style="@style/BaseWhiteTextStyle"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:gravity="start"
+        app:layout_constraintBottom_toTopOf="@id/guideline_left"
+        app:layout_constraintEnd_toEndOf="@id/complemento"
+        app:layout_constraintStart_toStartOf="@id/complemento"
+        app:layout_constraintTop_toBottomOf="@id/complemento"
+        tools:text="45098-445" />
+
+    <View
+        android:id="@+id/guideline_left"
+        android:layout_width="0dp"
+        android:layout_height="@dimen/regularMargin"
+        app:layout_constraintBottom_toBottomOf="@id/bg_left"
+        app:layout_constraintEnd_toEndOf="@id/cep"
+        app:layout_constraintStart_toStartOf="@id/cep"
+        app:layout_constraintTop_toBottomOf="@id/cep" />
+
+    <!--RIGHT SIDE-->
+    <TextView
+        android:id="@+id/morador"
+        style="@style/SubtitlePrimaryTextStyle"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/regularMargin"
+        android:layout_marginTop="@dimen/regularMargin"
+        android:layout_marginEnd="@dimen/regularMargin"
+        android:gravity="start"
+        app:layout_constraintBottom_toTopOf="@id/codigo_casa"
+        app:layout_constraintEnd_toEndOf="@id/bg_right"
+        app:layout_constraintStart_toStartOf="@id/bg_right"
+        app:layout_constraintTop_toTopOf="@id/bg_right"
+        app:layout_constraintVertical_chainStyle="packed"
+        tools:text="Morador: José da Silva" />
+
+    <TextView
+        android:id="@+id/codigo_casa"
+        style="@style/SubtitlePrimaryTextStyle"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:gravity="start"
+        app:layout_constraintBottom_toTopOf="@id/hidrometro"
+        app:layout_constraintEnd_toEndOf="@id/morador"
+        app:layout_constraintStart_toStartOf="@id/morador"
+        app:layout_constraintTop_toBottomOf="@id/morador"
+        tools:text="Código da casa: X54656" />
+
+    <TextView
+        android:id="@+id/hidrometro"
+        style="@style/SubtitlePrimaryTextStyle"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:gravity="start"
+        app:layout_constraintBottom_toTopOf="@id/guideline_right"
+        app:layout_constraintEnd_toEndOf="@id/codigo_casa"
+        app:layout_constraintStart_toStartOf="@id/codigo_casa"
+        app:layout_constraintTop_toBottomOf="@id/codigo_casa"
+        tools:text="Hidrômetro: x7t6387" />
+
+    <View
+        android:id="@+id/guideline_right"
+        android:layout_width="0dp"
+        android:layout_height="@dimen/regularMargin"
+        app:layout_constraintBottom_toBottomOf="@id/bg_right"
+        app:layout_constraintEnd_toEndOf="@id/hidrometro"
+        app:layout_constraintStart_toStartOf="@id/hidrometro"
+        app:layout_constraintTop_toBottomOf="@id/hidrometro" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

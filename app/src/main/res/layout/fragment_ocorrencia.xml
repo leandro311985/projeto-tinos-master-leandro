@@ -1,0 +1,160 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+<androidx.constraintlayout.widget.ConstraintLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingBottom="30dp"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/btBack"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:clickable="true"
+        android:padding="@dimen/activity_horizontal_margin"
+        app:srcCompat="@drawable/ic_back_button"
+        android:focusable="true" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/btBack"
+        app:layout_constraintBottom_toBottomOf="@+id/btBack"
+        android:fontFamily="@font/breeserif_regular"
+        android:text="OCORRÊNCIA"/>
+
+    <View android:layout_width="0dp"
+        android:layout_height="1dp"
+        android:background="#232A37"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btBack"
+        android:layout_marginEnd="50dp"
+        android:id="@+id/divider"
+        android:layout_marginStart="50dp"/>
+
+    <TextView
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="Preencha os campos abaixo para criar uma nova ocorrência"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:gravity="center"
+        android:id="@+id/info"
+        android:padding="@dimen/activity_vertical_margin"
+        app:layout_constraintTop_toBottomOf="@+id/divider"
+        android:layout_marginStart="50dp"
+        android:layout_marginEnd="50dp"/>
+
+    <Button
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:id="@+id/btTipoOcorrencia"
+        android:layout_marginStart="@dimen/activity_horizontal_margin"
+        android:layout_marginEnd="@dimen/activity_horizontal_margin"
+        app:layout_constraintTop_toBottomOf="@+id/info"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:text="@string/fragment_occourence_title_button_type_occourence"
+        android:paddingStart="@dimen/activity_horizontal_margin"
+        android:gravity="center_vertical|left"
+        android:paddingEnd="@dimen/activity_horizontal_margin"
+        android:drawableEnd="@drawable/ic_disclosure_accent"
+        android:textColor="@color/text_color_accent_selector"
+        android:background="@drawable/bg_white_selector"/>
+
+    <Button
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:id="@+id/btJustificativa"
+        android:layout_marginStart="@dimen/activity_horizontal_margin"
+        android:layout_marginEnd="@dimen/activity_horizontal_margin"
+        app:layout_constraintTop_toBottomOf="@+id/btTipoOcorrencia"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:text="@string/fragment_occourence_title_button_justify"
+        android:enabled="false"
+        android:paddingStart="@dimen/activity_horizontal_margin"
+        android:gravity="center_vertical|left"
+        android:layout_marginTop="@dimen/activity_vertical_margin"
+        android:paddingEnd="@dimen/activity_horizontal_margin"
+        android:drawableEnd="@drawable/ic_disclosure_accent"
+        android:textColor="@color/text_color_accent_selector"
+        android:background="@drawable/bg_white_selector"/>
+
+    <EditText
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="@+id/btTipoOcorrencia"
+        app:layout_constraintEnd_toEndOf="@+id/btTipoOcorrencia"
+        app:layout_constraintTop_toBottomOf="@+id/btJustificativa"
+        android:background="@drawable/bg_white_rounded_selector"
+        android:layout_marginTop="@dimen/activity_vertical_margin"
+        android:lines="7"
+        android:textColor="@color/colorPrimary"
+        android:textColorHint="@color/colorPrimary"
+        android:id="@+id/etObservacoes"
+        android:inputType="textMultiLine"
+        android:padding="@dimen/activity_vertical_margin"
+        android:enabled="false"
+        android:gravity="start|top"
+        android:hint="Inserir texto"
+        />
+
+    <Button
+        android:layout_width="86dp"
+        android:layout_height="86dp"
+        android:background="@drawable/bg_white_selector"
+        android:drawableTop="@drawable/ic_add_imagem"
+        android:paddingTop="8dp"
+        android:textAllCaps="false"
+        android:id="@+id/addPhoto"
+        app:layout_constraintStart_toStartOf="@+id/etObservacoes"
+        app:layout_constraintTop_toBottomOf="@+id/etObservacoes"
+        android:layout_marginTop="20dp"
+        android:text="Adicionar Foto"/>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:id="@+id/recyclerView"
+        android:layout_marginStart="@dimen/activity_horizontal_margin"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/addPhoto"
+        app:layout_constraintTop_toTopOf="@+id/addPhoto"
+        app:layout_constraintBottom_toBottomOf="@+id/addPhoto"/>
+
+    <Button
+        android:layout_width="0dp"
+        style="@style/RoundedBorderedButton"
+        android:id="@+id/btCancel"
+        app:layout_constraintTop_toBottomOf="@+id/addPhoto"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/btSave"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="20dp"
+        android:layout_marginStart="40dp"
+        android:text="Cancelar"/>
+
+    <Button
+        android:layout_width="0dp"
+        style="@style/RoundedButton"
+        android:id="@+id/btSave"
+        app:layout_constraintTop_toBottomOf="@+id/addPhoto"
+        app:layout_constraintStart_toEndOf="@+id/btCancel"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="20dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginBottom="20dp"
+        android:layout_marginEnd="40dp"
+        android:text="Salvar"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.core.widget.NestedScrollView>

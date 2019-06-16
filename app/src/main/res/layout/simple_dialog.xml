@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <ImageView
+        android:id="@+id/bg_dialog"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:scaleType="centerCrop"
+        android:src="@drawable/bg_dialog"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <ImageView
+        android:id="@+id/icon"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/largeMargin"
+        android:src="@drawable/ic_dialog"
+        android:visibility="gone"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/title"
+        style="@style/DialogTitlePrimaryTextStyle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/largeMargin"
+        android:paddingStart="@dimen/xLargeMargin"
+        android:paddingEnd="@dimen/xLargeMargin"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/icon"
+        tools:text="Texto asd asd as dasd asdas as asd asd as das das das dasdas dasdasda" />
+
+    <Button
+        android:id="@+id/btn_cancel"
+        style="@style/RoundedBorderedTextLeftButton"
+        android:layout_width="0dp"
+        android:layout_marginStart="@dimen/mediumMargin"
+        android:layout_marginTop="@dimen/xLargeMargin"
+        android:layout_marginEnd="@dimen/mediumMargin"
+        android:layout_marginBottom="@dimen/largeMargin"
+        android:text="@string/cancel"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/btn_ok"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/title"
+        tools:visibility="visible" />
+
+    <Button
+        android:id="@+id/btn_ok"
+        style="@style/RoundedTextLeftButton"
+        android:layout_width="0dp"
+        android:layout_marginEnd="@dimen/mediumMargin"
+        android:text="@string/yes"
+        android:visibility="gone"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/btn_cancel"
+        app:layout_constraintTop_toTopOf="@id/btn_cancel"
+        tools:visibility="visible" />
+
+    <Button
+        android:id="@+id/btn_close"
+        style="@style/BaseRoundedButton"
+        android:layout_width="wrap_content"
+        android:layout_marginStart="@dimen/xLargeMargin"
+        android:layout_marginTop="@dimen/xLargeMargin"
+        android:layout_marginEnd="@dimen/xLargeMargin"
+        android:layout_marginBottom="@dimen/largeMargin"
+        android:minWidth="150dp"
+        android:text="@string/close"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/title"
+        tools:layout_constraintTop_toBottomOf="@id/btn_cancel" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

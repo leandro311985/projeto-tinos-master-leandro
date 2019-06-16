@@ -1,0 +1,248 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:fillViewport="true">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:paddingBottom="@dimen/largeMargin">
+
+        <ImageButton
+            android:id="@+id/btn_back"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            android:padding="@dimen/mediumMargin"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/ic_back_button" />
+
+        <TextView
+            android:id="@+id/title"
+            style="@style/TitleBlueTextStyle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/xxLargeMargin"
+            android:layout_marginEnd="@dimen/xxLargeMargin"
+            app:layout_constraintBottom_toBottomOf="@id/btn_back"
+            android:textSize="18sp"
+            android:text="Finalizar tarefa"
+            app:layout_constraintTop_toTopOf="@id/btn_back" />
+
+        <ImageView
+            android:id="@+id/image"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/title"
+            app:srcCompat="@drawable/ic_transmissao" />
+
+        <View
+            android:id="@+id/divider"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginStart="@dimen/xxLargeMargin"
+            android:layout_marginTop="@dimen/mediumMargin"
+            android:layout_marginEnd="@dimen/xxLargeMargin"
+            android:background="@color/dividerColor"
+            app:layout_constraintTop_toBottomOf="@id/image" />
+
+        <TextView
+            android:id="@+id/sub"
+            style="@style/BaseTextStyle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/xxLargeMargin"
+            android:layout_marginTop="@dimen/mediumMargin"
+            android:layout_marginEnd="@dimen/xxLargeMargin"
+            android:text="@string/transmissao_sub"
+            app:layout_constraintTop_toBottomOf="@id/divider" />
+
+        <View
+            android:id="@+id/bg_horiz"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:background="@drawable/bg_grey_bordered"
+            app:layout_constraintBottom_toBottomOf="@id/pendentes"
+            app:layout_constraintEnd_toEndOf="@id/ocorrencias"
+            app:layout_constraintStart_toStartOf="@id/total"
+            app:layout_constraintTop_toTopOf="@id/total" />
+
+        <View
+            android:id="@+id/bg_vert"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:background="@drawable/bg_grey_bordered"
+            app:layout_constraintBottom_toBottomOf="@id/pendentes"
+            app:layout_constraintEnd_toEndOf="@id/ocorrencias"
+            app:layout_constraintStart_toStartOf="@id/leituras"
+            app:layout_constraintTop_toTopOf="@id/leituras" />
+
+        <View
+            android:id="@+id/bg_total"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:background="@color/colorPrimary"
+            app:layout_constraintBottom_toBottomOf="@id/total"
+            app:layout_constraintEnd_toEndOf="@id/ocorrencias"
+            app:layout_constraintStart_toStartOf="@id/leituras"
+            app:layout_constraintTop_toTopOf="@id/total" />
+
+        <View
+            android:id="@+id/bg_pendentes"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:background="@drawable/bg_blue_bordered"
+            app:layout_constraintBottom_toBottomOf="@id/pendentes"
+            app:layout_constraintEnd_toEndOf="@id/ocorrencias"
+            app:layout_constraintStart_toStartOf="@id/leituras"
+            app:layout_constraintTop_toTopOf="@id/pendentes" />
+
+        <TextView
+            android:id="@+id/leituras"
+            style="@style/BaseTextStyle"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/largeMargin"
+            android:gravity="center"
+            android:padding="10dp"
+            android:text="Leituras"
+            app:layout_constraintEnd_toStartOf="@id/ocorrencias"
+            app:layout_constraintStart_toEndOf="@id/total"
+            app:layout_constraintTop_toBottomOf="@id/sub" />
+
+        <TextView
+            android:id="@+id/ocorrencias"
+            style="@style/BaseTextStyle"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="@dimen/mediumMargin"
+            android:gravity="center"
+            android:padding="10dp"
+            android:text="Ocorrências"
+            app:layout_constraintBottom_toBottomOf="@id/leituras"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/leituras"
+            app:layout_constraintTop_toTopOf="@id/leituras" />
+
+        <TextView
+            android:id="@+id/total"
+            style="@style/BaseTextStyle"
+            android:layout_width="90dp"
+            android:layout_height="80dp"
+            android:layout_marginStart="@dimen/mediumMargin"
+            android:gravity="center"
+            android:padding="@dimen/regularMargin"
+            android:text="Total"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/leituras" />
+
+        <TextView
+            android:id="@+id/pendentes"
+            style="@style/BaseTextStyle"
+            android:layout_width="0dp"
+            android:layout_height="80dp"
+            android:gravity="center"
+            android:padding="@dimen/regularMargin"
+            android:text="Pendente de envio"
+            app:layout_constraintEnd_toEndOf="@id/total"
+            app:layout_constraintStart_toStartOf="@id/total"
+            app:layout_constraintTop_toBottomOf="@id/total" />
+
+        <TextView
+            android:id="@+id/leitura_total"
+            style="@style/BaseTextStyle"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:alpha="1"
+            android:textColor="@color/white"
+            android:textSize="30sp"
+            app:layout_constraintBottom_toBottomOf="@id/total"
+            app:layout_constraintEnd_toEndOf="@id/leituras"
+            app:layout_constraintStart_toStartOf="@id/leituras"
+            app:layout_constraintTop_toBottomOf="@id/leituras"
+            tools:text="30" />
+
+        <TextView
+            android:id="@+id/leitura_pendente"
+            style="@style/BaseTextStyle"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:alpha="1"
+            android:textColor="@color/white"
+            android:textSize="30sp"
+            app:layout_constraintBottom_toBottomOf="@id/pendentes"
+            app:layout_constraintEnd_toEndOf="@id/leituras"
+            app:layout_constraintStart_toStartOf="@id/leituras"
+            app:layout_constraintTop_toBottomOf="@id/leitura_total"
+            tools:text="1" />
+
+        <TextView
+            android:id="@+id/ocorrencia_total"
+            style="@style/BaseTextStyle"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:alpha="1"
+            android:textColor="@color/white"
+            android:textSize="30sp"
+            app:layout_constraintBottom_toBottomOf="@id/leitura_total"
+            app:layout_constraintEnd_toEndOf="@id/ocorrencias"
+            app:layout_constraintStart_toStartOf="@id/ocorrencias"
+            app:layout_constraintTop_toBottomOf="@id/ocorrencias"
+            tools:text="02" />
+
+        <TextView
+            android:id="@+id/ocorrencia_pendente"
+            style="@style/BaseTextStyle"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:alpha="1"
+            android:textColor="@color/white"
+            android:textSize="30sp"
+            app:layout_constraintBottom_toBottomOf="@id/pendentes"
+            app:layout_constraintEnd_toEndOf="@id/ocorrencias"
+            app:layout_constraintStart_toStartOf="@id/ocorrencias"
+            app:layout_constraintTop_toBottomOf="@id/ocorrencia_total"
+            tools:text="03" />
+
+        <View
+            android:id="@+id/divider_horiz"
+            android:layout_width="0dp"
+            android:layout_height="1dp"
+            android:background="@color/dividerColor"
+            app:layout_constraintEnd_toEndOf="@id/ocorrencias"
+            app:layout_constraintStart_toStartOf="@id/total"
+            app:layout_constraintTop_toBottomOf="@id/total" />
+
+        <View
+            android:id="@+id/divider_vert"
+            android:layout_width="1dp"
+            android:layout_height="0dp"
+            android:background="@color/whiteDividerColor"
+            app:layout_constraintBottom_toBottomOf="@id/pendentes"
+            app:layout_constraintStart_toEndOf="@id/leituras"
+            app:layout_constraintTop_toTopOf="@id/leituras" />
+
+        <Button
+            android:id="@+id/btn_send"
+            style="@style/RoundedButton"
+            android:layout_width="0dp"
+            android:layout_marginStart="@dimen/xLargeMargin"
+            android:layout_marginTop="@dimen/xxLargeMargin"
+            android:layout_marginEnd="@dimen/xLargeMargin"
+            android:text="@string/send"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/ocorrencia_pendente" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.core.widget.NestedScrollView>

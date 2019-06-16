@@ -1,0 +1,231 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nestedScrollView"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#E3E3E3"
+    android:fillViewport="true">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/constraintLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/header"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/blueColor"
+            android:paddingBottom="@dimen/activity_vertical_margin"
+            app:layout_constraintBottom_toTopOf="@+id/nav_host_fragment"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <TextView
+                android:id="@+id/morador_label"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/activity_horizontal_margin"
+                android:layout_marginTop="@dimen/activity_vertical_margin"
+                android:layout_marginEnd="8dp"
+                android:text="@string/activity_leitura_title_morador"
+                android:textColor="@color/textBlue"
+                app:layout_constraintEnd_toStartOf="@+id/codigo"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/morador"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="8dp"
+                android:textColor="@color/white"
+                android:textSize="@dimen/textSizeMedium"
+                app:layout_constraintEnd_toStartOf="@+id/codigo"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="@+id/morador_label"
+                app:layout_constraintTop_toBottomOf="@+id/morador_label"
+                tools:text="José da Silva" />
+
+            <TextView
+                android:id="@+id/status_label"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:layout_marginEnd="16dp"
+                android:text="@string/activity_leitura_title_status"
+                android:textColor="@color/textBlue"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/codigo" />
+
+            <TextView
+                android:id="@+id/status"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/white"
+                app:layout_constraintEnd_toEndOf="@+id/status_label"
+                app:layout_constraintTop_toBottomOf="@+id/status_label"
+                tools:text="Cortado" />
+
+            <TextView
+                android:id="@+id/residencia_label"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:text="@string/activity_leitura_title_residencia"
+                android:textColor="@color/textBlue"
+                app:layout_constraintEnd_toEndOf="@+id/status"
+                app:layout_constraintTop_toBottomOf="@+id/status" />
+
+            <TextView
+                android:id="@+id/numero"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="8dp"
+                android:textColor="@color/white"
+                android:textSize="40sp"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toTopOf="@+id/separator"
+                app:layout_constraintEnd_toEndOf="@+id/residencia_label"
+                app:layout_constraintTop_toBottomOf="@+id/residencia_label"
+                tools:text="521" />
+
+            <TextView
+                android:id="@+id/codigo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="16dp"
+                android:textColor="@color/white"
+                android:textSize="24sp"
+                android:paddingStart="20dp"
+                android:paddingEnd="20dp"
+                android:background="@drawable/bg_badge_blue"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:text="1" />
+
+            <View
+                android:id="@+id/divider"
+                android:layout_width="0dp"
+                android:layout_height="1dp"
+                android:layout_marginStart="@dimen/activity_horizontal_margin"
+                android:layout_marginTop="16dp"
+                android:layout_marginEnd="@dimen/activity_horizontal_margin"
+                android:background="@color/whiteOpaqueDividerColor"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/endereco" />
+
+            <ImageView
+                android:id="@+id/icon_hidrometro"
+                android:layout_width="41dp"
+                android:layout_height="37dp"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="@dimen/activity_vertical_margin"
+                android:src="@drawable/ic_hidrometro"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/divider" />
+
+            <TextView
+                android:id="@+id/hidrometro_label"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:text="@string/activity_leitura_title_hidrometro"
+                app:layout_constraintStart_toEndOf="@+id/icon_hidrometro"
+                app:layout_constraintTop_toTopOf="@+id/icon_hidrometro" />
+
+            <TextView
+                android:id="@+id/hidrometro"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/white"
+                app:layout_constraintStart_toStartOf="@+id/hidrometro_label"
+                app:layout_constraintTop_toBottomOf="@+id/hidrometro_label"
+                tools:text="X10S76798" />
+
+            <View
+                android:id="@+id/separator"
+                android:layout_width="1dp"
+                android:layout_height="1dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/divider" />
+
+            <ImageView
+                android:id="@+id/icon_matricula"
+                android:layout_width="41dp"
+                android:layout_height="37dp"
+                android:layout_marginEnd="16dp"
+                android:src="@drawable/ic_matricula"
+                app:layout_constraintBottom_toBottomOf="@+id/matricula"
+                app:layout_constraintEnd_toStartOf="@+id/matricula_label"
+                app:layout_constraintTop_toTopOf="@+id/matricula_label"
+                app:layout_constraintVertical_bias="0.53" />
+
+            <TextView
+                android:id="@+id/matricula_label"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                android:layout_marginEnd="62dp"
+                android:text="@string/activity_leitura_title_matricula"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/separator" />
+
+            <TextView
+                android:id="@+id/matricula"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/white"
+                app:layout_constraintStart_toStartOf="@+id/matricula_label"
+                app:layout_constraintTop_toBottomOf="@+id/matricula_label"
+                tools:text="X10S76798" />
+
+            <View
+                android:id="@+id/dividerMorador"
+                android:layout_width="40dp"
+                android:layout_height="1dp"
+                android:layout_marginTop="32dp"
+                android:background="@color/whiteOpaqueDividerColor"
+                app:layout_constraintStart_toStartOf="@+id/morador"
+                app:layout_constraintTop_toBottomOf="@+id/morador" />
+
+            <TextView
+                android:id="@+id/endereco"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="8dp"
+                android:layout_marginBottom="8dp"
+                android:textAlignment="textStart"
+                android:textColor="@color/textBlue"
+                android:textSize="12sp"
+                app:layout_constraintBottom_toTopOf="@+id/divider"
+                app:layout_constraintEnd_toStartOf="@+id/numero"
+                app:layout_constraintStart_toStartOf="@+id/dividerMorador"
+                app:layout_constraintTop_toBottomOf="@+id/dividerMorador"
+                tools:text="Rua Paula Souza\nCompl. Segundo Andar\nValo Velho 45605-080" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <fragment
+            android:id="@+id/nav_host_fragment"
+            android:name="androidx.navigation.fragment.NavHostFragment"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            app:defaultNavHost="true"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/header"
+            app:navGraph="@navigation/navigation_leitura"
+            tools:layout="@layout/fragment_leitura_menu" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.core.widget.NestedScrollView>

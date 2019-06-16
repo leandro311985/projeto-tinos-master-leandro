@@ -1,0 +1,86 @@
+<resources>
+    <string name="app_name">GMF</string>
+    <string name="title_activity_main">Tarefas</string>
+
+    <string name="send">Enviar</string>
+    <string name="cancel">Cancelar</string>
+    <string name="yes">Sim</string>
+    <string name="no">Não</string>
+    <string name="close">Fechar</string>
+    <string name="ok">Ok</string>
+    <string name="save">Salvar</string>
+
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+
+    <string name="main_activity_title_dialog_close_app">Deseja realmente fechar o aplicativo?</string>
+
+    <string name="action_settings">Settings</string>
+
+    <string name="tarefas_title">Tarefas</string>
+    <string name="transmissao_title">Transmissão</string>
+    <string name="pesquisa_title">Pesquisa</string>
+    <string name="impressao_backup_title">Impressão Backup</string>
+    <string name="impressao_ultimos_title">Impressão 50 Itens</string>
+    <string name="impressao_teste_title">Teste de Impressão</string>
+    <string name="estatistica_title">Estatística</string>
+    <string name="menuEstatisticas">Finalizar Tarefa</string>
+
+    <string name="transmissao_sub">O sistema envia suas leituras e ocorrências no momento do cadastro quando estiver Online ou a cada uma hora de forma automática.</string>
+    <string name="transmissao_dialog_simple_title">Nullam quis risus eget urna mollis ornare vel eu leo.</string>
+    <string name="transmissao_dialog_action_title">Deseja realmente finalizar a tarefa?</string>
+
+    <string name="pesquisa_sub">Selecione a categoria que você deseja buscar</string>
+    <string name="pesquisa_medidor">Medidor</string>
+    <string name="pesquisa_matricula">Matrícula</string>
+    <string name="pesquisa_nome">Nome</string>
+    <string name="pesquisa_endereco">Endereço</string>
+    <string name="pesquisa_search">Buscar</string>
+
+    <string name="impressao_sub">Ligue a impressora e coloque o papel. Em caso de problemas, procure seu supervisor.</string>
+
+    <string name="impressao_backup_sub_title">Confirma impressão de Backup?</string>
+
+    <string name="impressao_ultimos_sub_title">Confirma impressão dos últimos 50 itens?</string>
+
+    <string name="impressao_teste_sub_title">Confirma teste de impressão?</string>
+
+    <string name="estatistica_sub">Maecenas faucibus mollis interdum.</string>
+
+    <string name="endereco">%s, %s</string>
+
+    <string name="pesquisa_morador">Morador: %s</string>
+    <string name="pesquisa_codigo_casa">Código da casa: %s</string>
+    <string name="pesquisa_hidrometro">Hidrômetro: %s</string>
+    <string name="pesquisa_search_type">Buscar por %s</string>
+    <string name="pesquisa_no_results">Nenhum resultado encontrado</string>
+
+    <string name="formas_entrega_dialog_title">Forma de Entrega</string>
+    <string name="formas_entrega_dialog_sub">Selecione a forma que foi entregue</string>
+    <string name="formas_entrega_dialog_maos">Em mãos</string>
+    <string name="formas_entrega_dialog_correios">Caixa dos correios</string>
+    <string name="formas_entrega_dialog_porta">Embaixo da porta</string>
+    <string name="formas_entrega_dialog_portao">No portão</string>
+    <string name="formas_entrega_dialog_vizinho_esquerda">Vizinho da esquerda</string>
+    <string name="formas_entrega_dialog_vizinho_direita">Vizinho da direita</string>
+    <string name="formas_entrega_dialog_not_delivered">Não entregue</string>
+
+    <string name="print_dialog_title">Imprimir</string>
+    <string name="informatives">Informativos</string>
+    <string name="title_next">Próximo</string>
+    <string name="content_message_icon">message icon</string>
+    <string name="activity_leitura_title_morador">Morador</string>
+    <string name="activity_leitura_title_matricula">Matrícula</string>
+    <string name="activity_leitura_title_hidrometro">Hidrômetro</string>
+    <string name="activity_leitura_title_residencia">Residência</string>
+    <string name="activity_leitura_title_status">Status</string>
+    <string name="fragment_occourence_title_button_type_occourence">Tipo de Ocorrência</string>
+    <string name="fragment_occourence_title_button_justify">Justificativa</string>
+    <string name="title_activity_maps_home">Map</string>
+
+    <string name="map_error">Tivemos um problema ao buscar essa localização. Por favor, tente novamente.</string>
+    <string name="mapa_btn_imoveis">Ver imóveis</string>
+    <string name="mapa_btn_rotas">Ver rota</string>
+    <string name="mapa_btn_close">Fechar</string>
+
+</resources>

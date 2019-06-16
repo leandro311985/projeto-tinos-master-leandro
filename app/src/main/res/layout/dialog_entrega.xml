@@ -1,0 +1,199 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/root_view"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <TextView
+        android:id="@+id/title"
+        style="@style/FormasEntregaDialogTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/largeMargin"
+        android:text="@string/formas_entrega_dialog_title"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/sub"
+        style="@style/BaseTextStyle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/formas_entrega_dialog_sub"
+        app:layout_constraintEnd_toEndOf="@id/title"
+        app:layout_constraintStart_toStartOf="@id/title"
+        app:layout_constraintTop_toBottomOf="@id/title" />
+
+    <View
+        android:id="@+id/divider"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginStart="@dimen/mediumMargin"
+        android:layout_marginTop="@dimen/mediumMargin"
+        android:layout_marginEnd="@dimen/mediumMargin"
+        android:background="@color/dividerColor"
+        app:layout_constraintTop_toBottomOf="@id/sub" />
+
+    <androidx.core.widget.NestedScrollView
+        android:id="@+id/scrollview"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/mediumMargin"
+        android:layout_marginTop="@dimen/mediumMargin"
+        android:layout_marginEnd="@dimen/mediumMargin"
+        android:layout_marginBottom="@dimen/largeMargin"
+        android:fillViewport="true"
+        android:orientation="vertical"
+        app:layout_constrainedHeight="true"
+        app:layout_constraintBottom_toTopOf="@id/btn_save"
+        app:layout_constraintTop_toBottomOf="@id/divider">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <Button
+                android:id="@+id/btn_maos"
+                style="@style/DialogSelectableButton"
+                android:layout_width="0dp"
+                android:layout_height="@dimen/formaEntregaSelectableButtonHeight"
+                android:layout_marginEnd="@dimen/regularMargin"
+                android:drawableTop="@drawable/ic_mao"
+                android:drawablePadding="@dimen/smallMargin"
+                android:text="@string/formas_entrega_dialog_maos"
+                app:layout_constraintEnd_toStartOf="@id/btn_correios"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <Button
+                android:id="@+id/btn_correios"
+                style="@style/DialogSelectableButton"
+                android:layout_width="0dp"
+                android:layout_height="@dimen/formaEntregaSelectableButtonHeight"
+                android:drawableTop="@drawable/ic_correios"
+                android:drawablePadding="@dimen/smallMargin"
+                android:text="@string/formas_entrega_dialog_correios"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@id/btn_maos"
+                app:layout_constraintTop_toTopOf="@id/btn_maos" />
+
+            <Button
+                android:id="@+id/btn_porta"
+                style="@style/DialogSelectableButton"
+                android:layout_width="0dp"
+                android:layout_height="@dimen/formaEntregaSelectableButtonHeight"
+                android:layout_marginTop="@dimen/regularMargin"
+                android:layout_marginEnd="@dimen/regularMargin"
+                android:drawableTop="@drawable/ic_porta"
+                android:drawablePadding="@dimen/smallMargin"
+                android:text="@string/formas_entrega_dialog_porta"
+                app:layout_constraintEnd_toStartOf="@id/btn_portao"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/btn_maos" />
+
+            <Button
+                android:id="@+id/btn_portao"
+                style="@style/DialogSelectableButton"
+                android:layout_width="0dp"
+                android:layout_height="@dimen/formaEntregaSelectableButtonHeight"
+                android:drawableTop="@drawable/ic_portao"
+                android:drawablePadding="@dimen/smallMargin"
+                android:text="@string/formas_entrega_dialog_portao"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@id/btn_porta"
+                app:layout_constraintTop_toTopOf="@id/btn_porta" />
+
+            <Button
+                android:id="@+id/btn_vizinho_esquerdo"
+                style="@style/DialogSelectableButton"
+                android:layout_width="0dp"
+                android:layout_height="@dimen/formaEntregaSelectableButtonHeight"
+                android:layout_marginTop="@dimen/regularMargin"
+                android:layout_marginEnd="@dimen/regularMargin"
+                android:drawableTop="@drawable/ic_esquerda"
+                android:drawablePadding="@dimen/smallMargin"
+                android:text="@string/formas_entrega_dialog_vizinho_esquerda"
+                app:layout_constraintEnd_toStartOf="@id/btn_vizinho_direito"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/btn_porta" />
+
+            <Button
+                android:id="@+id/btn_vizinho_direito"
+                style="@style/DialogSelectableButton"
+                android:layout_width="0dp"
+                android:layout_height="@dimen/formaEntregaSelectableButtonHeight"
+                android:drawableTop="@drawable/ic_direita"
+                android:drawablePadding="@dimen/smallMargin"
+                android:text="@string/formas_entrega_dialog_vizinho_direita"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@id/btn_vizinho_esquerdo"
+                app:layout_constraintTop_toTopOf="@id/btn_vizinho_esquerdo" />
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/btn_not_delivered"
+                style="@style/DialogSelectableButton"
+                android:layout_width="0dp"
+                android:layout_height="@dimen/formaEntregaSelectableButtonHeight"
+                android:layout_marginTop="@dimen/regularMargin"
+                android:layout_marginBottom="@dimen/regularMargin"
+                android:background="@drawable/bg_button_yellow"
+                android:drawablePadding="@dimen/smallMargin"
+                app:cornerRadius="8dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="@id/btn_vizinho_esquerdo"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/btn_vizinho_esquerdo">
+
+                <TextView
+                    android:id="@+id/tvTitleNotDelivered"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:fontFamily="@font/breeserif_regular"
+                    android:text="@string/formas_entrega_dialog_not_delivered"
+                    android:textAlignment="center"
+                    android:textColor="@color/colorPrimaryDark"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.5"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/tvMotivo"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/breeserif_regular"
+                    android:textAlignment="center"
+                    android:textColor="@color/colorPrimary"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.5"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/tvTitleNotDelivered"
+                    tools:text="Ausente" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.core.widget.NestedScrollView>
+
+    <Button
+        android:id="@+id/btn_save"
+        style="@style/BaseRoundedButton"
+        android:layout_width="wrap_content"
+        android:layout_marginStart="@dimen/xLargeMargin"
+        android:layout_marginEnd="@dimen/xLargeMargin"
+        android:layout_marginBottom="@dimen/largeMargin"
+        android:minWidth="150dp"
+        android:text="@string/save"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
