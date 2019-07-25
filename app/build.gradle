@@ -18,7 +18,7 @@ android {
     compileSdkVersion 28
     defaultConfig {
         applicationId "br.com.iresult.gmfmobile"
-        minSdkVersion 17
+        minSdkVersion 19
         targetSdkVersion 28
         versionCode 23
         versionName "2.4"
@@ -124,6 +124,7 @@ dependencies {
 
     implementation 'android.arch.navigation:navigation-fragment:1.0.0'
     implementation 'com.github.santalu:mask-edittext:1.1.1'
+    implementation 'com.lalitdhameliya:progressbutton:1.0.0'
     implementation 'com.google.maps.android:android-maps-utils:0.5'
 
     // Testing support room

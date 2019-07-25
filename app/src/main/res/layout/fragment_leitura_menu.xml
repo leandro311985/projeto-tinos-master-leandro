@@ -227,6 +227,19 @@
 
         </LinearLayout>
 
+        <com.lalitdhameliya.progressbutton.ProgressButton
+            android:id="@+id/testing_button"
+            android:layout_width="80dp"
+            android:layout_height="30dp"
+            android:layout_marginTop="8dp"
+            app:layout_constraintBottom_toBottomOf="@+id/leitura"
+            app:layout_constraintEnd_toEndOf="@+id/leitura"
+            app:layout_constraintStart_toStartOf="@+id/leitura"
+            app:layout_constraintTop_toTopOf="@+id/leitura"
+            app:text="carregando"
+            app:textColor="@color/colorAccent" />
+
+
         <com.santalu.maskedittext.MaskEditText
             android:id="@+id/leitura"
             android:layout_width="0dp"

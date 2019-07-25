@@ -43,6 +43,7 @@ class LeituraMenuFragment : Fragment() {
         }
 
         btClose.setOnClickListener {
+            testing_button.showProgress(true)
             qtdTentativas++
             var visita: Visita = Visita()
             if (!viewModel.leitura.value?.isEmpty()!!) {
